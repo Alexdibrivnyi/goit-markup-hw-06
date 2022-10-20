@@ -1,9 +1,12 @@
-/* -------------------------------- HEADER ---------------------------------- */
-
 .root {
   --main-color: #ffffff;
   --main-cub: cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+
+/* -------------------------------- HEADER ---------------------------------- */
+
+
 
 body {
   font-family: "Roboto", sans-serif;
@@ -519,12 +522,12 @@ transform: translateX(0);
   padding: 6px 22px;
   background-color: #f5f4fa;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-  background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) ,
+  background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
   box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.portfolio-button :hover,
-.portfolio-button :focus {
+.portfolio-button:hover,
+.portfolio-button:focus {
   color: #ffffff;
   background-color: #2196f3;
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
@@ -692,8 +695,13 @@ transform: translateX(0);
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  /* width: 206px;
-  height: 80px; */
+  flex-direction: column;
+  align-items: flex-start
+  /* display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%; 
+    height: 90px; */
 }
 
 .third-footer-text {
@@ -704,11 +712,72 @@ letter-spacing: 0.03em;
 text-transform: uppercase;
 
 color: #FFFFFF;
+margin-bottom: 20px;
 }
 
-.some-div {
+
+
+.subscribe-div {
   display: flex;
-  justify-content: center;
+}
+
+.subscribe-email {
+  width: 358px;
+  margin-right: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+background-color: #2F303A;
+border-radius: 4px;
+}
+
+.subscribe-email::placeholder {
+  font-weight: 400;
+font-size: 16px;
+line-height: 1.25px;
+
+padding-left: 16px;
+
+
+letter-spacing: 0.03em;
+
+color: rgba(255, 255, 255, 0.6);
+}
+
+.subscribe-btn {
+  position: relative;
+  font-family: 'Roboto';
+font-style: normal;
+font-weight: 700;
+font-size: 16px;
+line-height: 1.88px;
+width: 200px;
+height: 50px;
+border: 0px;
+padding: 10px 28px;
+background: #2196F3;
+border-radius: 4px;
+
+display: flex;
+align-items: center;
+text-align: center;
+letter-spacing: 0.06em;
+cursor: pointer;
+transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+color: #FFFFFF;
+
+}
+
+.subscribe-btn:hover,
+.subscribe-btn:focus {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+
+
+
+.subscribe-icon {
+  position: absolute;
+  top: 13px;
+  right: 28px;
+  fill: #FFFFFF;
 }
 
 /* ------------------BACKDROP--------------- */
@@ -755,13 +824,13 @@ border-radius: 4px;
   align-items: center;
   padding: 0;
   cursor: pointer;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
 .modal-btn:hover,
 .modal-btn:focus {
-  color: #2196F3;
+  fill: #2196F3;
 }
 
 .is-hidden { 
@@ -837,6 +906,7 @@ height: 50px;
 border: 0px;
 transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 margin: 0 auto;
+bottom: 0px;
 }
 
 .send-button:hover,
